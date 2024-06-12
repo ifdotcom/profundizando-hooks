@@ -38,7 +38,6 @@ export const SimpleForm = () => {
     // console.log("Email changed");
   }, [email]);
 
-
   return (
     <>
       <h1>Formulario</h1>
@@ -53,7 +52,7 @@ export const SimpleForm = () => {
         value={username}
         onChange={onInputChange}
       />
-
+      {username === "ifdotcom2" && <Message />}
       <input
         type="mail"
         className="form-control mt-4"
@@ -62,9 +61,6 @@ export const SimpleForm = () => {
         value={email}
         onChange={onInputChange}
       />
-      {
-        (username === "ifdotcom2") && <Message/>
-      }
     </>
   );
 };
